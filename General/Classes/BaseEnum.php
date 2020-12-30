@@ -4,7 +4,7 @@ namespace Nkf\General\Classes;
 
 use ReflectionClass;
 
-abstract class BaseEnums
+abstract class BaseEnum
 {
     public static function getVariables() : array
     {
