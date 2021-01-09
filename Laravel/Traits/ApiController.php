@@ -24,7 +24,7 @@ trait ApiController
         return response()->json([
             'access_token' => $token,
             'token_type' => 'brear',
-            'expires_in' => auth()->factory()->getTTL() * 60
+            'expires_in' => auth('api')->factory()->getTTL() * 60
         ]);
     }
 
