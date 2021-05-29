@@ -10,7 +10,7 @@ use Nkf\General\Classes\UrlHelper;
 use Nkf\General\Utils\PathUtils;
 use Storage;
 
-trait ApiController
+trait TraitApiController
 {
     protected function respondContent($data, int $status = 200) : JsonResponse
     {
