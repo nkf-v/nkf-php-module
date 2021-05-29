@@ -29,8 +29,8 @@ final class ArrayUtils
             return $values;
 
         $result = [];
-        foreach ($values as $value)
-            $result[] = $value;
+        foreach ($values as $key => $value)
+            $result[$key] = $value;
 
         return $result;
     }
