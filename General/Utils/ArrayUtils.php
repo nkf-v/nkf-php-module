@@ -34,4 +34,9 @@ final class ArrayUtils
 
         return $result;
     }
+
+    public static function first(array $values)
+    {
+        return $values[array_key_first($values)];
+    }
 }
