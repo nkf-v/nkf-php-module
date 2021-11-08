@@ -23,11 +23,22 @@ class ServerError extends Exception
     {
         $result = [];
         foreach ($this->errors as $key => $errors)
-            foreach ($errors as $error)
-                $result[$key][] = [
-                    'code' => $error,
+        {
+            if (is_array($errors))
+            {
+                foreach ($errors as $error)
+                {
+                    $result[$key][] = [
+                        'code' => $error,
 //                'message' => '', // TODO get message by code from lang file
-                ];
+                    ];
+                }
+            }
+            else
+            {
+                $result[$key] = $errors;
+            }
+        }
 
         return response()->json(['errors' => $result])->setStatusCode(500);
     }
